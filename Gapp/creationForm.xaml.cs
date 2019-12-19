@@ -51,6 +51,7 @@ namespace Gapp
             cmd.Parameters.Add("@creationDate", OleDbType.Date).Value = arrivalTime.ToShortDateString();
             cmd.ExecuteNonQuery();
             MessageBox.Show("success....");
+            this.Close();
           
            
         }

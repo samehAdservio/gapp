@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Gapp"
         mc:Ignorable="d"
-        Title="AdminView" Height="450" Width="800">
+        Title="AdminView" Height="450" Width="800" WindowState="Maximized">
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+    </Window.Background>
     <Grid>
-        <DockPanel HorizontalAlignment="Left" Height="247" LastChildFill="False" Margin="10,140,0,0" VerticalAlignment="Top" Width="772">
-            <DataGrid  Name="gvData" Height="247" VerticalAlignment="Top" Width="770"/>
-
-        </DockPanel>
-        <DockPanel HorizontalAlignment="Right" Height="25" LastChildFill="False" Margin="0,10,0,0" VerticalAlignment="Top" Width="428">
+        <DataGrid Name="gvData" SelectionMode="Single" Margin="10,38,10,10" FrozenColumnCount="1"/>
+        <WrapPanel Height="23" Margin="10,10,10,0" VerticalAlignment="Top">
             <TextBox x:Name="txtSearch" Height="25" TextWrapping="Wrap"  VerticalAlignment="Top" Width="201" TextChanged="TextBox_TextChanged"/>
             <DatePicker  Height="25" VerticalAlignment="Top" SelectedDateChanged="DatePicker_SelectedDateChanged" Name="dpick" IsTodayHighlighted="True"/>
-        </DockPanel>
+        
+
+        </WrapPanel>
+
 
     </Grid>
 </Window>

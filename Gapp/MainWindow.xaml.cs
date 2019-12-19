@@ -36,7 +36,12 @@ namespace Gapp
       
 
         private void button1_Click(object sender, RoutedEventArgs e)
-    {
+        {
+            NewMethod();
+        }
+
+        private void NewMethod()
+        {
             if (textBoxEmail.Text.Length == 0)
             {
                 errormessage.Text = "Enter an email.";
@@ -51,13 +56,26 @@ namespace Gapp
                 {
                     AdminView adminView = new AdminView();
                     adminView.Show();
-                }
+                    this.Close();                }
                 else
                 {
                     errormessage.Text = "Enter a valid credentials.";
                     textBoxEmail.Focus();
                 }
             }
+        }
+
+        private void PasswordBox1_TouchEnter(object sender, TouchEventArgs e)
+        {
+           
+        }
+
+        private void PasswordBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key != Key.Return && e.Key != Key.Enter)
+                return;
+            e.Handled = true;
+            NewMethod();
         }
     }
 }

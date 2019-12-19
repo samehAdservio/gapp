@@ -7,13 +7,19 @@
         mc:Ignorable="d"
         Activated="WindowActivated"
         WindowStartupLocation="CenterScreen" WindowState="Maximized"
-        Title="Home" Height="450" Width="800">
+        Title="Home" Height="489" Width="1441.1" Margin="0">
+    <Window.Background>
+        <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.HighlightColorKey}}"/>
+    </Window.Background>
     <Grid>
-        <DataGrid Name="gvData" SelectionMode="Single" HorizontalAlignment="Left" Height="342" Margin="0,77,0,0" VerticalAlignment="Top" Width="792"/>
-        <Button Content="s'ajouter" HorizontalAlignment="Left" Margin="707,35,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.6,0.5" Click="Button_Click"/>
-        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="23" Margin="350,50,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"  TextChanged="TxtSearch_TextChanged"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="586,35,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="90,35,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <DataGrid Name="gvData" SelectionMode="Single" Margin="10,38,10,10" FrozenColumnCount="1"/>
+        <WrapPanel Height="23" Margin="10,10,10,0" VerticalAlignment="Top">
+            <Button Content="admin " HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_2" Margin="1,0,0,0"/>
+            <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="272"  TextChanged="TxtSearch_TextChanged" Margin="700,0,0,0"/>
+            <Button Content="Sortir" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Margin="95,0,0,0"/>
+            <Button Content="Entrer" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" RenderTransformOrigin="1.6,0.5" Click="Button_Click" Margin="24,0,0,0"/>
+
+        </WrapPanel>
 
 
     </Grid>

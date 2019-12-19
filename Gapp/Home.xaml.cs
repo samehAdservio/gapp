@@ -39,7 +39,7 @@ namespace Gapp
         private void BindGrid()
         {
             DateTime today = DateTime.Now.Date;
-            OleDbCommand cmd = new OleDbCommand();
+            OleDbCommand cmd= new OleDbCommand();
             if (con.State != ConnectionState.Open)
                 con.Open();
             cmd.Connection = con;
@@ -49,6 +49,16 @@ namespace Gapp
             dt = new DataTable();
             da.Fill(dt);
             gvData.ItemsSource = dt.AsDataView();
+            gvData.Columns[0].Width = 100;
+            gvData.Columns[1].Width = 200;
+            gvData.Columns[2].Width = 200;
+            gvData.Columns[3].Width = 300;
+            gvData.Columns[4].Width = 300;
+
+            gvData.Columns[5].Width = 300;
+
+
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -75,7 +85,7 @@ namespace Gapp
         {
             try {
             DataRowView row = (DataRowView)gvData.SelectedItems[0];
-            MessageBox.Show(row["ID"]+"");
+   
                 string rowId = row["ID"].ToString();
                 DateTime arrivalTime = DateTime.Now;
 
