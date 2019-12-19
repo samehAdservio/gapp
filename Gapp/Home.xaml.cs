@@ -74,11 +74,18 @@ namespace Gapp
             if (con.State != ConnectionState.Open)
                 con.Open();
             cmd.Connection = con;
-            cmd.CommandText = "select * from guestTable where lastName like '%"+txtSearch.Text+ "%' and creationDate = #" + today + "#";
+            cmd.CommandText = "select ID,firstName,lastName,company,departureTime,arrivalTime from guestTable where lastName like '%" + txtSearch.Text+ "%' and creationDate = #" + today + "#";
             OleDbDataAdapter da = new OleDbDataAdapter(cmd);
             dt = new DataTable();
             da.Fill(dt);
             gvData.ItemsSource = dt.AsDataView();
+            gvData.Columns[0].Width = 100;
+            gvData.Columns[1].Width = 200;
+            gvData.Columns[2].Width = 200;
+            gvData.Columns[3].Width = 300;
+            gvData.Columns[4].Width = 300;
+
+            gvData.Columns[5].Width = 300;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

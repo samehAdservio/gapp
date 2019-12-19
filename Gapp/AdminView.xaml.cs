@@ -43,6 +43,13 @@ namespace Gapp
             dt = new DataTable();
             da.Fill(dt);
             gvData.ItemsSource = dt.AsDataView();
+            gvData.Columns[0].Width = 100;
+            gvData.Columns[1].Width = 200;
+            gvData.Columns[2].Width = 200;
+            gvData.Columns[3].Width = 300;
+            gvData.Columns[4].Width = 300;
+
+            gvData.Columns[5].Width = 300;
         }
 
         private void DatePicker_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
@@ -59,8 +66,15 @@ namespace Gapp
             dt = new DataTable();
             da.Fill(dt);
             gvData.ItemsSource = dt.AsDataView();
-        
-    }
+            gvData.Columns[0].Width = 100;
+            gvData.Columns[1].Width = 200;
+            gvData.Columns[2].Width = 200;
+            gvData.Columns[3].Width = 300;
+            gvData.Columns[4].Width = 300;
+
+            gvData.Columns[5].Width = 300;
+
+        }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
@@ -73,6 +87,13 @@ namespace Gapp
             dt = new DataTable();
             da.Fill(dt);
             gvData.ItemsSource = dt.AsDataView();
+            gvData.Columns[0].Width = 100;
+            gvData.Columns[1].Width = 200;
+            gvData.Columns[2].Width = 200;
+            gvData.Columns[3].Width = 300;
+            gvData.Columns[4].Width = 300;
+
+            gvData.Columns[5].Width = 300;
         }
     }
 }
